@@ -43,7 +43,9 @@
     "once": "^1.4.0",
     "pull-defer": "~0.2.3",
     "pull-stream": "^3.6.9",
-    "upath": "^1.1.0"
+    "upath": "^1.1.0",
+    "node-cache": "^4.2.1",
+    "once": "^1.4.0"
   },
   "devDependencies": {
     "aegir": "^18.1.0",
