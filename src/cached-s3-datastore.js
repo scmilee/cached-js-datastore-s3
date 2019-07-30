@@ -125,7 +125,9 @@ class cachedS3Datastore extends S3Datastore {
   delete (key /* : Key */, callback /* : Callback<void> */) /* : void */ {
     callback = once(callback);
     super.delete(key,callback);
-    this.indexCache.del(key);  
+    if(this.cacheReady){
+      this.indexCache.del(key);  
+    } 
   }
 
   /**
@@ -181,7 +183,7 @@ class cachedS3Datastore extends S3Datastore {
    * @returns {Iterator}
    */
   _getS3Iterator (keys /* : Array<Key> */, keysOnly /* : boolean */) {
-   super._getS3Iterator(keys,keysOnly)
+    return super._getS3Iterator(keys,keysOnly)
   }
 
   /**
