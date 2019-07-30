@@ -1,4 +1,4 @@
-const S3Datastore = require('datastore-s3');
+const S3Datastore = require('./index.js');
 const NodeCache = require('node-cache');
 const once = require('once');
 const _ = require('lodash');
